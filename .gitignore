@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# asset 파일들 이그노어
+/Concrete textures pack/
+/Real Stars Skybox/
+
