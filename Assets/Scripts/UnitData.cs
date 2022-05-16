@@ -16,7 +16,7 @@ public float range = 15;
 public float attSpeed;
 
 
-[Header("UI")]
+[Header("Appearance")]
 public Unit prefab;
 
 }

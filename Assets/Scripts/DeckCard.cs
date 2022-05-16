@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class DeckCard : Card
+public class DeckCard : MonoBehaviour
 {
+    public Sprite[] cardSprites;
     const int numOfCards = 52;                      // 전체 카드의 수
     private Card[] deck;                            // 플레이에 사용할 덱
 
@@ -17,16 +18,17 @@ public class DeckCard : Card
 
     public void SetUpDeck()                         // 덱 생성하기 
     {
+        DeckofCards();
         int i = 0;
-        foreach (SUIT suit in Enum.GetValues(typeof(SUIT)))     // SUIT 값 넣기
+        foreach (Card.SUIT suit in Enum.GetValues(typeof(Card.SUIT)))     // SUIT 값 넣기
         {
-            foreach (RANK rank in Enum.GetValues(typeof(RANK))) // RANK 값 넣기
+            foreach (Card.RANK rank in Enum.GetValues(typeof(Card.RANK))) // RANK 값 넣기
             {
                 deck[i] = new Card {mySuit = suit, myRank = rank};
+                Debug.Log(deck[i].sprite);
                 i++;
             }
         }
-
         ShuffleDeck();                                          // 덱 만들고 덱 한번 섞어주기
     }
 
@@ -34,16 +36,23 @@ public class DeckCard : Card
     {
         System.Random rand = new System.Random();
         Card cardData;
+        //Sprite cardFace;
 
-        for (int shuffletime=0; shuffletime < 1000; shuffletime++)
+
+        for (int ShuffleTime = 0; ShuffleTime < 10; ShuffleTime++)
         {
             for (int i=0; i < numOfCards; i++)
-            {
-                int secondCardIndex = rand.Next(13);
-                cardData = deck[i];
-                deck[i] = deck[secondCardIndex];
-                deck[secondCardIndex] = cardData;
-            }
+        {   
+            // cardData 섞기
+            int secondCardIndex = rand.Next(13);
+            cardData = deck[i];
+            deck[i] = deck[secondCardIndex];
+            deck[secondCardIndex] = cardData;
+
+            // // cardSprite 섞기
+            // cardFace = deck[i];
+            // deck[i] = deck[sc]
+        }
         }
     }
 }
