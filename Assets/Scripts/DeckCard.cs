@@ -5,9 +5,10 @@ using System;
 
 public class DeckCard : MonoBehaviour
 {
-    public Sprite[] cardSprites;
+    public CardData[] cardData;
     const int numOfCards = 52;                      // 전체 카드의 수
     private Card[] deck;                            // 플레이에 사용할 덱
+    
 
     public void DeckofCards()                       // deck에 전체카드수 = 52장만큼의 배열 생성
     {
@@ -19,16 +20,15 @@ public class DeckCard : MonoBehaviour
     public void SetUpDeck()                         // 덱 생성하기 
     {
         DeckofCards();
-        int i = 0;
-        foreach (Card.SUIT suit in Enum.GetValues(typeof(Card.SUIT)))     // SUIT 값 넣기
+        
+        for (int i = 0; i < cardData.Length; i++)
         {
-            foreach (Card.RANK rank in Enum.GetValues(typeof(Card.RANK))) // RANK 값 넣기
-            {
-                deck[i] = new Card {mySuit = suit, myRank = rank};
-                Debug.Log(deck[i].sprite);
-                i++;
-            }
+            deck[i] = new Card();
+            deck[i].sprite = cardData[i].sprite;
+            deck[i].mySuit = cardData[i].cardSuit;
+            deck[i].myRank = cardData[i].cardRank;
         }
+        
         ShuffleDeck();                                          // 덱 만들고 덱 한번 섞어주기
     }
 
@@ -36,7 +36,6 @@ public class DeckCard : MonoBehaviour
     {
         System.Random rand = new System.Random();
         Card cardData;
-        //Sprite cardFace;
 
 
         for (int ShuffleTime = 0; ShuffleTime < 10; ShuffleTime++)
@@ -49,10 +48,9 @@ public class DeckCard : MonoBehaviour
             deck[i] = deck[secondCardIndex];
             deck[secondCardIndex] = cardData;
 
-            // // cardSprite 섞기
-            // cardFace = deck[i];
-            // deck[i] = deck[sc]
         }
         }
     }
+
 }
+

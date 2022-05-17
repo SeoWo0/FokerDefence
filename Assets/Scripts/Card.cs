@@ -5,6 +5,7 @@ using UnityEngine;
 public class Card
 {   
     public Sprite sprite;
+
     public enum SUIT
     {
         SPADES,
