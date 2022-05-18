@@ -37,7 +37,6 @@ public class DeckCard : MonoBehaviour
         System.Random rand = new System.Random();
         Card cardData;
 
-
         for (int ShuffleTime = 0; ShuffleTime < 10; ShuffleTime++)
         {
             for (int i=0; i < numOfCards; i++)

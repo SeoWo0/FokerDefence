@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 46604880}
   - component: {fileID: 46604879}
   m_Layer: 5
-  m_Name: ChangeButton (2)
+  m_Name: ChangeButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 46604880}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303001012}
+        m_MethodName: ChangeThree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &46604880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +358,7 @@ GameObject:
   - component: {fileID: 341835275}
   - component: {fileID: 341835274}
   m_Layer: 5
-  m_Name: ChangeButton (1)
+  m_Name: ChangeButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,7 +425,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 341835275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303001012}
+        m_MethodName: ChangeTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &341835275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +487,7 @@ GameObject:
   - component: {fileID: 711857126}
   - component: {fileID: 711857125}
   m_Layer: 5
-  m_Name: ChangeButton (4)
+  m_Name: ChangeButton5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,7 +554,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 711857126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303001012}
+        m_MethodName: ChangeFive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &711857126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,7 +965,7 @@ GameObject:
   - component: {fileID: 1270620628}
   - component: {fileID: 1270620627}
   m_Layer: 5
-  m_Name: ChangeButton (3)
+  m_Name: ChangeButton4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,7 +1032,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1270620628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303001012}
+        m_MethodName: ChangeFour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1270620628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303001010}
   - component: {fileID: 1303001012}
+  - component: {fileID: 1303001011}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1163,6 +1208,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303001011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303001009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61276f8dbf63b4949b7566511e94ba4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handCardObjects:
+  - {fileID: 843596841}
+  - {fileID: 226506399}
+  - {fileID: 759448637}
+  - {fileID: 1301972485}
+  - {fileID: 1561995286}
+  changeButtons:
+  - {fileID: 1865851857}
+  - {fileID: 341835274}
+  - {fileID: 46604879}
+  - {fileID: 1270620627}
+  - {fileID: 711857125}
 --- !u!114 &1303001012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,12 +1297,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a21ed64c86baa644b40872eea6620fb, type: 2}
   - {fileID: 11400000, guid: deb196ebc57887d4898d76f6a5c5250f, type: 2}
   - {fileID: 11400000, guid: 2845ea4077dbb924f998cedc67115b82, type: 2}
-  cardObj:
-  - {fileID: 843596841}
-  - {fileID: 226506399}
-  - {fileID: 759448637}
-  - {fileID: 1301972485}
-  - {fileID: 1561995286}
 --- !u!1 &1430110020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1639,7 @@ GameObject:
   - component: {fileID: 1865851859}
   - component: {fileID: 1865851858}
   - component: {fileID: 1865851857}
+  - component: {fileID: 1865851860}
   m_Layer: 5
   m_Name: ChangeButton
   m_TagString: Untagged
@@ -1644,7 +1708,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1865851858}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303001012}
+        m_MethodName: ChangeOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1865851858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,6 +1757,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865851855}
   m_CullTransparentMesh: 0
+--- !u!114 &1865851860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865851855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f249effdf74d446ad2fe34e62bb15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dealCard: {fileID: 1303001012}
 --- !u!1 &1867006753
 GameObject:
   m_ObjectHideFlags: 0
