@@ -13,6 +13,6 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject[] handCardObjects;
-
+    public GameObject handRanking;
     public Button[] changeButtons;
 }
