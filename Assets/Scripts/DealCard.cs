@@ -11,6 +11,15 @@ public class DealCard : DeckCard
     public int spadeSum;
     public int clubSum;
     public int diamondSum;
+    public bool isHigh = false;
+    public bool isOnePair = false;
+    public bool isTwoPair = false;
+    public bool isThree = false;
+    public bool isFull = false;
+    public bool isStaright = false;
+    public bool isFour = false;
+    public bool isPlush = false;
+    public bool isStarightP = false;
 
     public DealCard()                               // PlayerHand에 5장의 배열 생성
     {
@@ -19,6 +28,7 @@ public class DealCard : DeckCard
 
     private void Start() {
         Deal();
+        GetNumberOfSuit();
     }
 
     private void Update() {
@@ -182,7 +192,6 @@ public class DealCard : DeckCard
         card.mySuit = getDecK[randomCardNum].mySuit;    // 새로운 카드에 Suit 값 넣기
 
         playerHand[4] = card;
-        Debug.Log(card.myRank + " , " + card.mySuit);
         cardList.Remove(card);                         // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
 
         GameManager.instance.handCardObjects[4].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
@@ -208,52 +217,138 @@ public class DealCard : DeckCard
         if(HighCard())
         {
             spriteRenderer.sprite = rankSprites[2];
+            isHigh = true;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(OnePair())
         {
             spriteRenderer.sprite = rankSprites[3];
+            isHigh = false;
+            isOnePair = true;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(TwoPair())
         {
             spriteRenderer.sprite = rankSprites[8];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = true;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(ThreeOfKind())
         {
             spriteRenderer.sprite = rankSprites[7];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = true;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(FullHouse())
         {
             spriteRenderer.sprite = rankSprites[1];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = true;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(Straight())
         {
             spriteRenderer.sprite = rankSprites[5];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = true;
+            isPlush = false;
+            isStarightP = false;
         }
 
         if(FourOfKind())
         {
             spriteRenderer.sprite = rankSprites[0];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = true;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = false;
         }
         
         if(Plush())
         {
             spriteRenderer.sprite = rankSprites[4];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = true;
+            isStarightP = false;
         }
 
         if(StraightPlush())
         {
             spriteRenderer.sprite = rankSprites[6];
+            isHigh = false;
+            isOnePair = false;
+            isTwoPair = false;
+            isThree = false;
+            isFull = false;
+            isFour = false;
+            isStaright = false;
+            isPlush = false;
+            isStarightP = true;
         }
 
     }
 
     public void GetNumberOfSuit()
     {   
+        heartSum = 0;
+        spadeSum = 0;
+        diamondSum = 0;
+        clubSum = 0;
+
         for(int i = 0; i<5; i++)
         {
             if(playerHand[i].mySuit == Card.SUIT.HEARTS)
@@ -332,6 +427,9 @@ public class DealCard : DeckCard
             return true;
         if(playerHand[0].myRank == playerHand[4].myRank && playerHand[2].myRank == playerHand[3].myRank)
             return true;
+        if(playerHand[1].myRank == playerHand[2].myRank && playerHand[3].myRank == playerHand[4].myRank)
+            return true;
+        
         else
         {
             return false;
@@ -342,7 +440,15 @@ public class DealCard : DeckCard
     {   
         if(playerHand[0].myRank == playerHand[1].myRank && playerHand[0].myRank == playerHand[2].myRank)
             return true;
+        if(playerHand[0].myRank == playerHand[1].myRank && playerHand[0].myRank == playerHand[3].myRank)
+            return true;
+        if(playerHand[0].myRank == playerHand[1].myRank && playerHand[0].myRank == playerHand[4].myRank)
+            return true;
         if(playerHand[1].myRank == playerHand[2].myRank && playerHand[1].myRank == playerHand[3].myRank)
+            return true;
+        if(playerHand[1].myRank == playerHand[2].myRank && playerHand[1].myRank == playerHand[4].myRank)
+            return true;
+        if(playerHand[1].myRank == playerHand[3].myRank && playerHand[1].myRank == playerHand[4].myRank)
             return true;
         if(playerHand[2].myRank == playerHand[3].myRank && playerHand[2].myRank == playerHand[4].myRank)
             return true;
@@ -410,7 +516,7 @@ public class DealCard : DeckCard
 
     private bool Plush()
     {
-        if(heartSum == 5 && spadeSum == 5 && diamondSum == 5 && clubSum == 5)
+        if(heartSum == 5 || spadeSum == 5 || diamondSum == 5 || clubSum == 5)
             return true;
 
         else
