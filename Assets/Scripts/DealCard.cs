@@ -7,19 +7,6 @@ public class DealCard : DeckCard
 {
     List<Card> cardList = new List<Card>();         // DeckList 
     public Card[] playerHand;                       // 플레이어가 실제로 가지고있는 다섯장의 카드
-    public enum HANDRESULT                          // 플레이어의 카드 결과 
-    {
-        HIGH,
-        ONEPAIR,
-        TWOPAIR,
-        THREEOFKIND,
-        FULLHOUSE,
-        STRAIGHT,
-        FOUROFKIND,
-        PLUSH,
-        STRAIGHTPLUSH
-    }
-
     public int heartSum;                            
     public int spadeSum;
     public int clubSum;
@@ -49,7 +36,7 @@ public class DealCard : DeckCard
     {      
         cardList.Clear();
 
-        for(int i=0; i<getDecK.Length; i++)
+        for(int i=0; i<getDecK.Count; i++)
         {  
             cardList.Add(getDecK[i]);
         }
@@ -71,7 +58,7 @@ public class DealCard : DeckCard
 
     public void ChangeOne()
     {   
-        int randomCardNum = Random.Range(0, 52);
+        int randomCardNum = Random.Range(0, cardList.Count);
 
         if(!cardList.Contains(getDecK[randomCardNum]))  // 만약 cardList에 getDecK[randomCardNum 이 포함되어있지않으면 함수 재실행
         ChangeOne();
@@ -87,11 +74,20 @@ public class DealCard : DeckCard
         GameManager.instance.handCardObjects[0].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         //GameManager.instance.changeButtons[0].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[0].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
+
+        getDecK.Clear();
+        
+        for(int i=0; i<cardList.Count; i++)
+        {
+            getDecK.Add(cardList[i]);
+        }
+
+        ShuffleDeck();
     }
 
     public void ChangeTwo()
     {   
-        int randomCardNum = Random.Range(0, 52);
+        int randomCardNum = Random.Range(0, cardList.Count);
 
         if(!cardList.Contains(getDecK[randomCardNum]))  // 만약 cardList에 getDecK[randomCardNum 이 포함되어있지않으면 함수 재실행
         ChangeTwo();
@@ -107,11 +103,20 @@ public class DealCard : DeckCard
         GameManager.instance.handCardObjects[1].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         //GameManager.instance.changeButtons[1].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[1].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
+
+        getDecK.Clear();
+        
+        for(int i=0; i<cardList.Count; i++)
+        {
+            getDecK.Add(cardList[i]);
+        }
+
+        ShuffleDeck();
     }
 
     public void ChangeThree()
     {   
-        int randomCardNum = Random.Range(0, 52);
+        int randomCardNum = Random.Range(0, cardList.Count);
 
         if(!cardList.Contains(getDecK[randomCardNum]))  // 만약 cardList에 getDecK[randomCardNum 이 포함되어있지않으면 함수 재실행
         ChangeThree();
@@ -126,11 +131,20 @@ public class DealCard : DeckCard
         GameManager.instance.handCardObjects[2].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         //GameManager.instance.changeButtons[2].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[2].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
+
+        getDecK.Clear();
+        
+        for(int i=0; i<cardList.Count; i++)
+        {
+            getDecK.Add(cardList[i]);
+        }
+
+        ShuffleDeck();
     }
 
     public void ChangeFour()
     {   
-        int randomCardNum = Random.Range(0, 52);
+        int randomCardNum = Random.Range(0, cardList.Count);
 
         if(!cardList.Contains(getDecK[randomCardNum]))  // 만약 cardList에 getDecK[randomCardNum 이 포함되어있지않으면 함수 재실행
         ChangeFour();
@@ -145,12 +159,20 @@ public class DealCard : DeckCard
         GameManager.instance.handCardObjects[3].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         //GameManager.instance.changeButtons[3].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[3].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
+
+        getDecK.Clear();
         
+        for(int i=0; i<cardList.Count; i++)
+        {
+            getDecK.Add(cardList[i]);
+        }
+
+        ShuffleDeck(); 
     }
 
     public void ChangeFive()
     {   
-        int randomCardNum = Random.Range(0, 52);
+        int randomCardNum = Random.Range(0, cardList.Count);
 
         if(!cardList.Contains(getDecK[randomCardNum]))  // 만약 cardList에 getDecK[randomCardNum 이 포함되어있지않으면 함수 재실행
         ChangeFive();
@@ -159,15 +181,24 @@ public class DealCard : DeckCard
         card.myRank = getDecK[randomCardNum].myRank;    // 새로운 카드에 Rank 값 넣기
         card.mySuit = getDecK[randomCardNum].mySuit;    // 새로운 카드에 Suit 값 넣기
 
-        playerHand[4] = card;                           
-        cardList.Remove(playerHand[4]);                 // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
+        playerHand[4] = card;
+        Debug.Log(card.myRank + " , " + card.mySuit);
+        cardList.Remove(card);                         // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
+
         GameManager.instance.handCardObjects[4].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
         GameManager.instance.handCardObjects[4].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         //GameManager.instance.changeButtons[4].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[4].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
-    }
+        
+        getDecK.Clear();
+        
+        for(int i=0; i<cardList.Count; i++)
+        {
+            getDecK.Add(cardList[i]);
+        }
 
-    
+        ShuffleDeck();
+    }
 
     public void EvaluateHand()
     {
@@ -218,6 +249,7 @@ public class DealCard : DeckCard
         {
             spriteRenderer.sprite = rankSprites[6];
         }
+
     }
 
     public void GetNumberOfSuit()
