@@ -11,6 +11,7 @@ public class UnitController : MonoBehaviour
 
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        DontDestroyOnLoad(gameObject);                      // 이 컴포넌트를 가지고 있으면 DontDestroy
     }
 
     public void SelectUnit()

@@ -12,7 +12,6 @@ public class MouseClick : MonoBehaviour
 
     [SerializeField]
     private GameObject          targetMarker;
-
     private Camera              mainCamera;
     private RTSUnitController   rTSUnitController;
 

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class RTSUnitController : MonoBehaviour
 {
-    [SerializeField]
-    private UnitSpawner unitSpawner;
     private List<UnitController> selectedUnitList;               // 플레이어가 선택한 유닛
     public  List<UnitController> unitList { get; private set;}   // 맵에 존재하는 모든 유닛
 
     private void Awake() {
         selectedUnitList = new List<UnitController>();
-        unitList         = unitSpawner.GetSpawnUnitsList();
+        unitList         = UnitManager.instance.GetSpawnUnitsRTSList();
     }
 
     public void ClickSelectUnit(UnitController unit)        // 마우스 클릭으로 유닛 선택

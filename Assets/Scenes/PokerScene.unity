@@ -1159,7 +1159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062899004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -300, y: 0, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children:
   - {fileID: 843596843}
@@ -1417,7 +1417,6 @@ GameObject:
   - component: {fileID: 1303001010}
   - component: {fileID: 1303001012}
   - component: {fileID: 1303001011}
-  - component: {fileID: 1303001013}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1542,29 +1541,6 @@ MonoBehaviour:
   isFour: 0
   isPlush: 0
   isStarightP: 0
---- !u!114 &1303001013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303001009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25ef0271e01a6e49b58441aac82efb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dealCard: {fileID: 1303001012}
-  unitData:
-  - {fileID: 11400000, guid: 398f28aaf4c54da429f5f4dcfa3abd5c, type: 2}
-  - {fileID: 11400000, guid: 1d6ba4a33bdb385449ec48b68e55d21e, type: 2}
-  - {fileID: 11400000, guid: 5e7131eb3f8100b4fb1a4dcad106318a, type: 2}
-  - {fileID: 11400000, guid: 42b0eed089c42b1408a7e19e9edf4b14, type: 2}
-  - {fileID: 11400000, guid: b4047b8e641161d4780b1ea1cea4c290, type: 2}
-  - {fileID: 11400000, guid: f295a73038c79204087a31beddeda99d, type: 2}
-  - {fileID: 11400000, guid: f274af4764b0cb44497a8a5a376d83ad, type: 2}
-  - {fileID: 11400000, guid: 3597a67d08663d34fbab69702acf8bf7, type: 2}
-  - {fileID: 11400000, guid: 05b34b39aea826c45b5f9ce8ed4a2427, type: 2}
 --- !u!1 &1350441536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1815,7 @@ GameObject:
   - component: {fileID: 1778900470}
   - component: {fileID: 1778900469}
   - component: {fileID: 1778900472}
+  - component: {fileID: 1778900473}
   m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
@@ -1920,7 +1897,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1303001013}
+      - m_Target: {fileID: 1778900473}
         m_MethodName: SpawnUnits
         m_Mode: 1
         m_Arguments:
@@ -1980,6 +1957,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ad704aa12172b49ab51226b54f3380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1778900473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778900467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2131c3de483984bb8f97ea1c3b19e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitRTSList: []
+  dealCard: {fileID: 1303001012}
+  unitData:
+  - {fileID: 11400000, guid: 398f28aaf4c54da429f5f4dcfa3abd5c, type: 2}
+  - {fileID: 11400000, guid: 1d6ba4a33bdb385449ec48b68e55d21e, type: 2}
+  - {fileID: 11400000, guid: 5e7131eb3f8100b4fb1a4dcad106318a, type: 2}
+  - {fileID: 11400000, guid: 42b0eed089c42b1408a7e19e9edf4b14, type: 2}
+  - {fileID: 11400000, guid: b4047b8e641161d4780b1ea1cea4c290, type: 2}
+  - {fileID: 11400000, guid: f295a73038c79204087a31beddeda99d, type: 2}
+  - {fileID: 11400000, guid: f274af4764b0cb44497a8a5a376d83ad, type: 2}
+  - {fileID: 11400000, guid: 3597a67d08663d34fbab69702acf8bf7, type: 2}
+  - {fileID: 11400000, guid: 05b34b39aea826c45b5f9ce8ed4a2427, type: 2}
 --- !u!1 &1865851855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040834404}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 22}
+  m_LocalPosition: {x: -300, y: 0, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

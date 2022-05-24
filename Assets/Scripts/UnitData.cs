@@ -17,6 +17,6 @@ public float attSpeed;
 
 
 [Header("Appearance")]
-public Unit prefab;
+public UnitController prefab;
 
 }

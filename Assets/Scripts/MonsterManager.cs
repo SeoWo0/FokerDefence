@@ -8,19 +8,23 @@ public class MonsterManager : MonoBehaviour
 
     public Monster monsterprefab;
     public float spawnDelay = 2f;
-    public float lastSpawnTime = 0f;
-    public Transform spawnPos;
+    public Transform[] wayPoints;
 
-    private void Update() {
-        SpawnMonster();
+    private void Awake() {
+        StartCoroutine(SpawnMonster());
     }
 
-    private void SpawnMonster()
-    {
-        if(Time.time < lastSpawnTime + spawnDelay)
-            return;
+    private IEnumerator SpawnMonster()
+    {   
+        while(true)
+        {
+            Monster clone = Instantiate(monsterprefab);
+            Monster monster = clone.GetComponent<Monster>();
 
-        lastSpawnTime = Time.time;
-        Instantiate(monsterprefab, spawnPos.position, Quaternion.identity);
-    }
+            monster.SetUp(wayPoints);
+
+            yield return new WaitForSeconds(spawnDelay);
+        }
 }
+}
+
