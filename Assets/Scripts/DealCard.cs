@@ -59,8 +59,7 @@ public class DealCard : DeckCard
         {
             playerHand[i] = getDecK[i];
 
-            GameManager.instance.handCardObjects[i].GetComponent<SpriteRenderer>().sprite = playerHand[i].sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-            GameManager.instance.handCardObjects[i].GetComponent<SpriteRenderer>().flipX = true;                    // X 축 뒤집기        
+            GameManager.instance.handCardObjects[i].GetComponent<SpriteRenderer>().sprite = playerHand[i].sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용        
 
             cardList.Remove(playerHand[i]);
         }
@@ -81,7 +80,6 @@ public class DealCard : DeckCard
         cardList.Remove(playerHand[0]);                 // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
 
         GameManager.instance.handCardObjects[0].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-        GameManager.instance.handCardObjects[0].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         GameManager.instance.changeButtons[0].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[0].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
 
@@ -110,7 +108,6 @@ public class DealCard : DeckCard
         cardList.Remove(playerHand[1]);                 // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
 
         GameManager.instance.handCardObjects[1].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-        GameManager.instance.handCardObjects[1].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         GameManager.instance.changeButtons[1].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[1].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
 
@@ -138,7 +135,6 @@ public class DealCard : DeckCard
         playerHand[2] = card;                           
         cardList.Remove(playerHand[2]);                 // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
         GameManager.instance.handCardObjects[2].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-        GameManager.instance.handCardObjects[2].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         GameManager.instance.changeButtons[2].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[2].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
 
@@ -166,7 +162,6 @@ public class DealCard : DeckCard
         playerHand[3] = card;                           
         cardList.Remove(playerHand[3]);                 // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
         GameManager.instance.handCardObjects[3].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-        GameManager.instance.handCardObjects[3].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         GameManager.instance.changeButtons[3].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[3].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
 
@@ -195,7 +190,6 @@ public class DealCard : DeckCard
         cardList.Remove(card);                         // 덱리스트에서 뽑은 카드를 삭제 (= 중복 방지)
 
         GameManager.instance.handCardObjects[4].GetComponent<SpriteRenderer>().sprite = card.sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용
-        GameManager.instance.handCardObjects[4].GetComponent<SpriteRenderer>().flipX = true;            // 카드의 Sprite X 축 뒤집기
         GameManager.instance.changeButtons[4].GetComponent<Button>().interactable = false;              // 버튼 한번 누르면 비활성화
         GameManager.instance.changeButtons[4].GetComponent<Image>().color = Color.red;                  // 버튼 한번 누르면 빨강색
         

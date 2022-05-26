@@ -8,16 +8,19 @@ public class Monster : MonoBehaviour
     private int             wayPointCount;      // 이동 경로 개수
     private int             currentIndex = 0;   // 현재 목표지점인덱스
     private Transform[]     wayPoints;          // 이동 경로 정보
+    private MonsterManager  monsterManager;     // 몬스터의 삭제를 본인이 하지않고 monsterManager에 알려서 삭제
 
-    public void SetUp(Transform[] wayPoints)
+    public void SetUp(MonsterManager monsterManager, Transform[] wayPoints)
     {
+        this.monsterManager = monsterManager;
+        
         // 몬스터 이동 경로 wayPoint 정보 설정
         wayPointCount = wayPoints.Length;
         this.wayPoints = new Transform[wayPointCount];
         this.wayPoints = wayPoints;
 
         // 몬스터의 시작위치를 첫번째 wayPoint 위치로 설정
-        transform.position = this.wayPoints[currentIndex].position;
+        transform.position = wayPoints[currentIndex].position;
 
         // 적 이동 / 목표지점 설정 코루틴 함수 시작
         StartCoroutine("OnMove");
@@ -55,8 +58,15 @@ public class Monster : MonoBehaviour
 
         else
         {
-            Destroy(gameObject);
+            OnDie();
             Debug.Log("목숨-");
         }
+    }
+
+    public void OnDie()
+    {
+        // MonsterManager에서 리스트로 몬스터 정보를 관리하기 때문에 Destroy()를 직접하지않고 
+        // 삭제될때 필요한 처리를 하기위해 DestroyMonster 함수 호출
+        monsterManager.DestoryMonster(this);
     }
 }

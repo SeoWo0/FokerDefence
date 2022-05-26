@@ -17,4 +17,4 @@ MonoBehaviour:
   damage: 1
   range: 15
   attSpeed: 1
-  prefab: {fileID: 6231724433999526140, guid: c61db4e92a0528d44b5ff820a9ae77ef, type: 3}
+  prefab: {fileID: 4040570516382207079, guid: 472eda4c7fef9044098f07d1125affaf, type: 3}
