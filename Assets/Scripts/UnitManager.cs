@@ -158,7 +158,6 @@ public class UnitManager : MonoBehaviour
         {
             unitRTSList.Add(unit);
         }
-        Debug.Log(unitRTSList.Count);
         return unitRTSList;
     }
 }

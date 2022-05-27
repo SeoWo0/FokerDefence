@@ -17,6 +17,7 @@ public class UnitAttack : MonoBehaviour
     private WeaponState weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
     private Transform attackTarget = null;  // 공격 상대
     private MonsterManager monsterManager;  // 존재하는 몬스터 정보 획득용
+    private Animator animator;
 
     public void SetUp(MonsterManager monsterManager)
     {

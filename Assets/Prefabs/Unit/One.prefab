@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 6142736147301433884, guid: 596061c42c1b6724597a6f41909838c8,
     type: 3}
-  spawnPos: {fileID: 4005719222025782747}
+  attackPos: {fileID: 0}
   attackSpeed: 0.5
   attackRange: 10
 --- !u!1 &4005719222791886448
