@@ -14,6 +14,8 @@ public class UnitAttack : MonoBehaviour
     private float attackSpeed;              // 공격 속도
     [SerializeField]
     private float attackRange;              // 공격 범위  
+    [SerializeField]
+    private int attackDamage;               // 공격력
     private WeaponState weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
     private Transform attackTarget = null;  // 공격 상대
     private MonsterManager monsterManager;  // 존재하는 몬스터 정보 획득용
@@ -110,6 +112,6 @@ public class UnitAttack : MonoBehaviour
     private void WeaponAttack()
     {
         GameObject clone = Instantiate(weaponPrefab, attackPos.position, Quaternion.identity);
-        clone.GetComponent<MeleeAttack>().SetUp(attackTarget);
+        clone.GetComponent<MeleeAttack>().SetUp(attackTarget, attackDamage);
     }
 }

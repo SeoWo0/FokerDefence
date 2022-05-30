@@ -9,6 +9,9 @@ public class MonsterManager : MonoBehaviour
     public float spawnDelay = 2f;
     public Transform[] wayPoints;
     private List<Monster> monsterList;      // 현재 맵에 존재하는 몬스터들의 정보
+    [SerializeField]
+    private PlayerHP playerHP;              // 플레이어 체력 Component
+
 
     // 적의 생성과 삭제는 MonsterManager가 하기때문에 set은 필요 없음
     public List<Monster> getMonsterList => monsterList;
@@ -38,8 +41,12 @@ public class MonsterManager : MonoBehaviour
         } 
     }
 
-    public void DestoryMonster(Monster monster)
+    public void DestoryMonster(EnumDestroyType type, Monster monster)
     {
+        if ( type == EnumDestroyType.Arrive)    // 종점에 도착하여 파괴됐을때
+        {
+            playerHP.TakeDamage(1);
+        }
         monsterList.Remove(monster);
         Destroy(monster.gameObject);
     }

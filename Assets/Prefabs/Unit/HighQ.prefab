@@ -2291,7 +2291,8 @@ MonoBehaviour:
     type: 3}
   attackPos: {fileID: 2631159491049272679}
   attackSpeed: 1
-  attackRange: 35
+  attackRange: 50
+  attackDamage: 10
 --- !u!114 &4390841486077597182
 MonoBehaviour:
   m_ObjectHideFlags: 0

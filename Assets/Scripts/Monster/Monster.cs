@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnumDestroyType { kill = 0, Arrive }
 public class Monster : MonoBehaviour
 {
     public float speed;
@@ -58,15 +59,15 @@ public class Monster : MonoBehaviour
 
         else
         {
-            OnDie();
+            OnDie(EnumDestroyType.Arrive);
             Debug.Log("목숨-");
         }
     }
 
-    public void OnDie()
+    public void OnDie(EnumDestroyType type)
     {
         // MonsterManager에서 리스트로 몬스터 정보를 관리하기 때문에 Destroy()를 직접하지않고 
         // 삭제될때 필요한 처리를 하기위해 DestroyMonster 함수 호출
-        monsterManager.DestoryMonster(this);
+        monsterManager.DestoryMonster(type, this);
     }
 }
