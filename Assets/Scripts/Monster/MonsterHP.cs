@@ -6,19 +6,22 @@ using UnityEngine.UI;
 public class MonsterHP : MonoBehaviour
 {
     [SerializeField]
-    private Image healthBar;
+    private Image           healthBar;
     [SerializeField]
-    private float maxHP;
-    private float currentHP;
-    private bool isDie = false;
-    private Monster monster;
-    private SpriteRenderer spriteRenderer;
+    private float           maxHP;
+    private float           currentHP;
+    private bool            isDie = false;
+    private Monster         monster;
+    private SpriteRenderer  spriteRenderer;
 
     private void Awake() {
         currentHP = maxHP;
         monster = GetComponent<Monster>();
     }
 
+    private void Update() {
+        // healthBar.transform.parent.transform.rotation = Quaternion.LookRotation(-Camera.main.transform.forward);
+    }
     public void TakeDamage(float damage)
     {
         if(isDie == true)

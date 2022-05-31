@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class UnitController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject unitMarker;
-    private NavMeshAgent navMeshAgent;
+    private GameObject      unitMarker;
+    private NavMeshAgent    navMeshAgent;
 
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();

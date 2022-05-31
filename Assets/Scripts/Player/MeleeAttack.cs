@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    private Transform target;
-    private int damage;
+    private Transform   target;
+    private int         damage;
 
     [SerializeField]
-    private float speed = 500f;
+    private float       speed = 500f;
 
     public void SetUp(Transform target, int damage)
     {

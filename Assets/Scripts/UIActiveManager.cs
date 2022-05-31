@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UIActiveManager : MonoBehaviour
 {
-    public static UIActiveManager instance {get; private set;}
-    public GameObject pokerUI;
-    public GameObject infoUI;
+    public static UIActiveManager   instance {get; private set;}
+    public GameObject               pokerUI;
+    public GameObject               GameUI;
 
     private void Awake() {
         instance = this;
@@ -24,12 +24,12 @@ public class UIActiveManager : MonoBehaviour
 
     public void InfoUIOff()
     {
-        infoUI.SetActive(false);
+        GameUI.SetActive(false);
     }
 
     public void InfoUIOn()
     {
-        infoUI.SetActive(true);
+        GameUI.SetActive(true);
     }
 }
 

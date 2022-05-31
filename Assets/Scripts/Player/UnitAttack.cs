@@ -7,19 +7,19 @@ public enum WeaponState { SearchTarget = 0, AttackToTarget }
 public class UnitAttack : MonoBehaviour
 {
     [SerializeField]
-    private GameObject weaponPrefab;    // 유닛 공격 무기 prefab
+    private GameObject      weaponPrefab;                               // 유닛 공격 무기 prefab
     [SerializeField]
-    private Transform attackPos;             // 무기 발사 위치
+    private Transform       attackPos;                                  // 무기 발사 위치
     [SerializeField]
-    private float attackSpeed;              // 공격 속도
+    private float           attackSpeed;                                // 공격 속도
     [SerializeField]
-    private float attackRange;              // 공격 범위  
+    private float           attackRange;                                // 공격 범위  
     [SerializeField]
-    private int attackDamage;               // 공격력
-    private WeaponState weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
-    private Transform attackTarget = null;  // 공격 상대
-    private MonsterManager monsterManager;  // 존재하는 몬스터 정보 획득용
-    private Animator animator;
+    private int             attackDamage;                               // 공격력
+    private WeaponState     weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
+    private Transform       attackTarget = null;                        // 공격 상대
+    private MonsterManager  monsterManager;                             // 존재하는 몬스터 정보 획득용
+    private Animator        animator;
 
     public void SetUp(MonsterManager monsterManager)
     {

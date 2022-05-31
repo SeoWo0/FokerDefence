@@ -6,8 +6,8 @@ public class WayManager : MonoBehaviour
 {
    public static WayManager instance { get; private set;}
    
-   public Transform wayPointParent;
-   public Transform[] wayPoints;
+   public Transform         wayPointParent;
+   public Transform[]       wayPoints;
    
    private void Awake() {
        instance = this;

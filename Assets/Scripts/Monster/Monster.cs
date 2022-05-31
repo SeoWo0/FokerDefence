@@ -10,6 +10,8 @@ public class Monster : MonoBehaviour
     private int             currentIndex = 0;   // 현재 목표지점인덱스
     private Transform[]     wayPoints;          // 이동 경로 정보
     private MonsterManager  monsterManager;     // 몬스터의 삭제를 본인이 하지않고 monsterManager에 알려서 삭제
+    [SerializeField]
+    private int             gold;               // 적 사망시 획득 가능한 골드
 
     public void SetUp(MonsterManager monsterManager, Transform[] wayPoints)
     {
@@ -58,7 +60,8 @@ public class Monster : MonoBehaviour
         }
 
         else
-        {
+        {   
+            gold = 0;
             OnDie(EnumDestroyType.Arrive);
             Debug.Log("목숨-");
         }
@@ -68,6 +71,6 @@ public class Monster : MonoBehaviour
     {
         // MonsterManager에서 리스트로 몬스터 정보를 관리하기 때문에 Destroy()를 직접하지않고 
         // 삭제될때 필요한 처리를 하기위해 DestroyMonster 함수 호출
-        monsterManager.DestoryMonster(type, this);
+        monsterManager.DestoryMonster(type, this, gold);
     }
 }

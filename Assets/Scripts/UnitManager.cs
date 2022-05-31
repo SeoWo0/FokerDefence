@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public static UnitManager instance { get; private set; }
-    public List<UnitController> unitRTSList = new List<UnitController>();           // RTS controller 이동, 선택에서 사용할 유닛 리스트
-    public static List<UnitController> unitList = new List<UnitController>();       // 유닛의 생성, 제거를 관리할 유닛 리스트
-    public DealCard dealCard;
-    public UnitData[] unitData;                                                     // 유닛 데이터 배열
-    private Vector2 minSize = new Vector2(-6, -6);                                  // 유닛 스폰 랜덤 위치 min
-    private Vector2 maxSize = new Vector2(6, 6);                                    // 유닛 스폰 랜덤 위치 max
-    public MonsterManager monsterManager;                                           // 현재 맵의 몬스터 정보를 얻기 위해
+    public static UnitManager           instance { get; private set; }
+    public List<UnitController>         unitRTSList = new List<UnitController>();           // RTS controller 이동, 선택에서 사용할 유닛 리스트
+    public static List<UnitController>  unitList = new List<UnitController>();              // 유닛의 생성, 제거를 관리할 유닛 리스트
+    public DealCard                     dealCard;
+    public UnitData[]                   unitData;                                           // 유닛 데이터 배열
+    private Vector2                     minSize = new Vector2(-6, -6);                      // 유닛 스폰 랜덤 위치 min
+    private Vector2                     maxSize = new Vector2(6, 6);                        // 유닛 스폰 랜덤 위치 max
+    public MonsterManager               monsterManager;                                     // 현재 맵의 몬스터 정보를 얻기 위해
 
     public int highCount;
     public int oneCount;
@@ -157,7 +157,7 @@ public class UnitManager : MonoBehaviour
         foreach (UnitController unit in units)
         {
             unitRTSList.Add(unit);
-        }
+        }   
         return unitRTSList;
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class Unit : MonoBehaviour
 {
-    private Animator animator;
-    private NavMeshAgent navMeshAgent;
+    private Animator        animator;
+    private NavMeshAgent    navMeshAgent;
 
     private void Awake() {
         animator = GetComponent<Animator>();
