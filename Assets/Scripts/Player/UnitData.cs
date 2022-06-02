@@ -11,8 +11,8 @@ public float sellCost;
 
 
 [Header("Unit Spec")]
-public float damage;
-public float range = 15;
+public float attDamage;
+public float attRange = 15;
 public float attSpeed;
 
 

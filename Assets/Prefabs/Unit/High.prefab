@@ -704,10 +704,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8641817766986115892, guid: 2ab0c3cee463f6744bbaf591e5fd7728,
     type: 3}
+  unitData: {fileID: 11400000, guid: 398f28aaf4c54da429f5f4dcfa3abd5c, type: 2}
   attackPos: {fileID: 3614144061393625095}
-  attackSpeed: 1
-  attackRange: 50
-  attackDamage: 1
+  attackSpeed: 0
+  attackRange: 0
+  attackDamage: 0
 --- !u!114 &8880356545634040683
 MonoBehaviour:
   m_ObjectHideFlags: 0

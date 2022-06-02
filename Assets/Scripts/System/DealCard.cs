@@ -21,14 +21,9 @@ public class DealCard : DeckCard
     public bool isPlush = false;
     public bool isStarightP = false;
 
-    public DealCard()                               // PlayerHand에 5장의 배열 생성
-    {
-        playerHand = new Card[5];
-    }
 
     private void Start() {
         Deal();
-        GetNumberOfSuit();
     }
 
     private void Update() {
@@ -37,9 +32,11 @@ public class DealCard : DeckCard
 
     public void Deal()
     {   
+        playerHand = new Card[5];
         SetUpDeck();    // 덱을 만들고 카드를 섞음
         ResetCardList();
         GetHand();
+        GetNumberOfSuit();
     }
 
     public void ResetCardList()
@@ -59,9 +56,16 @@ public class DealCard : DeckCard
         {
             playerHand[i] = getDecK[i];
 
-            GameManager.instance.handCardObjects[i].GetComponent<SpriteRenderer>().sprite = playerHand[i].sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용        
-
+            GameManager.instance.handCardObjects[i].GetComponent<SpriteRenderer>().sprite = playerHand[i].sprite;    // 카드의 SpriteRenderer 컴포넌트 가져와 Sprite 적용           
             cardList.Remove(playerHand[i]);
+        }
+    }
+
+    public void ResetDeck()
+    {
+        for(int i=0; i<getDecK.Count; i++)
+        {
+            getDecK.Clear();
         }
     }
 
@@ -201,6 +205,15 @@ public class DealCard : DeckCard
         }
 
         ShuffleDeck();
+    }
+
+    public void ResetChangeButton()
+    {
+        for(int i=0; i< GameManager.instance.changeButtons.Length; i++)
+        {
+            GameManager.instance.changeButtons[i].GetComponent<Button>().interactable = true;
+            GameManager.instance.changeButtons[i].GetComponent<Image>().color = Color.green;
+        }
     }
 
     public void EvaluateHand()

@@ -6,10 +6,8 @@ public class MouseClick : MonoBehaviour
 {
     [SerializeField]
     private LayerMask           layerUnit;
-
     [SerializeField]
     private LayerMask           layerGround;
-
     [SerializeField]
     private GameObject          targetMarker;
     private Camera              mainCamera;

@@ -5,12 +5,12 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private Transform   target;
-    private int         damage;
+    private float       damage;
 
     [SerializeField]
     private float       speed = 500f;
 
-    public void SetUp(Transform target, int damage)
+    public void SetUp(Transform target, float damage)
     {
         this.target = target;       // 유닛이 설정해준 target
         this.damage = damage;       // 유닛이 설정해준 공격력

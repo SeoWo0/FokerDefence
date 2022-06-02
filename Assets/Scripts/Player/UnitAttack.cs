@@ -9,17 +9,26 @@ public class UnitAttack : MonoBehaviour
     [SerializeField]
     private GameObject      weaponPrefab;                               // 유닛 공격 무기 prefab
     [SerializeField]
+    private UnitData        unitData;                                   // 유닛 데이터
+    [SerializeField]
     private Transform       attackPos;                                  // 무기 발사 위치
     [SerializeField]
     private float           attackSpeed;                                // 공격 속도
     [SerializeField]
     private float           attackRange;                                // 공격 범위  
     [SerializeField]
-    private int             attackDamage;                               // 공격력
+    private float           attackDamage;                               // 공격력
+
     private WeaponState     weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
     private Transform       attackTarget = null;                        // 공격 상대
     private MonsterManager  monsterManager;                             // 존재하는 몬스터 정보 획득용
     private Animator        animator;
+
+    private void Awake() {
+        attackDamage = unitData.attDamage;
+        attackSpeed = unitData.attSpeed;
+        attackRange = unitData.attRange;
+    }
 
     public void SetUp(MonsterManager monsterManager)
     {

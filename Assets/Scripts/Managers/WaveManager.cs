@@ -10,6 +10,9 @@ public class WaveManager : MonoBehaviour
     private MonsterManager  monsterManager;
     private int             currentWaveIndex = -1;  // 현재 웨이브 인덱스
 
+    public int              CurrentWave => currentWaveIndex + 1;    // 시작이 0이기 때문에 +1
+    public int              MaxWave => waves.Length;
+
     public void StartWave()
     {   
         // 현재 맵에 적이 없고, 실행할 Wave가 남아있으면
