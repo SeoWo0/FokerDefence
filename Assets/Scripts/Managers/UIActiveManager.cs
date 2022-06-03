@@ -5,8 +5,14 @@ using UnityEngine;
 public class UIActiveManager : MonoBehaviour
 {
     public static UIActiveManager   instance {get; private set;}
-    public GameObject               pokerUI;
-    public GameObject               GameUI;
+    [SerializeField]
+    private GameObject              pokerUI;
+    [SerializeField]
+    private GameObject              gameUI;
+    [SerializeField]
+    private GameObject              unitInfoUI;       
+    [SerializeField]
+    private GameObject              combineUI;
 
     private void Awake() {
         instance = this;
@@ -22,14 +28,25 @@ public class UIActiveManager : MonoBehaviour
         pokerUI.SetActive(true);
     }
 
-    public void InfoUIOff()
+    public void GameUIOff()
     {
-        GameUI.SetActive(false);
+        gameUI.SetActive(false);
     }
 
-    public void InfoUIOn()
+    public void GameUIOn()
     {
-        GameUI.SetActive(true);
+        gameUI.SetActive(true);
     }
+
+    public void UnitInfoOff()
+    {
+        unitInfoUI.SetActive(false);
+    }
+
+    // public void CombineUIOff()
+    // {
+    //     combineUI.SetActive(false);
+    // }
+
 }
 

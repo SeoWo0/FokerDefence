@@ -12,6 +12,9 @@ public class MouseClick : MonoBehaviour
     private GameObject          targetMarker;
     private Camera              mainCamera;
     private RTSUnitController   rTSUnitController;
+    [SerializeField]
+    private UnitDataViewer      unitDataViewer;
+
 
     private void Awake() {
         rTSUnitController   = GetComponent<RTSUnitController>();
@@ -40,6 +43,7 @@ public class MouseClick : MonoBehaviour
                 else
                 {
                     rTSUnitController.ClickSelectUnit(hit.transform.GetComponent<UnitController>());
+                    unitDataViewer.OnPanel(hit.transform);
                 }
             }
 

@@ -5,34 +5,46 @@ using UnityEngine;
 public class UnitManager : MonoBehaviour
 {
     public static UnitManager           instance { get; private set; }
-    public List<UnitController>         unitRTSList = new List<UnitController>();           // RTS controller 이동, 선택에서 사용할 유닛 리스트
-    public static List<UnitController>  unitList = new List<UnitController>();              // 유닛의 생성, 제거를 관리할 유닛 리스트
+    [SerializeField]
+    private MonsterManager              monsterManager;                                     // 현재 맵의 몬스터 정보를 얻기 위해
     public DealCard                     dealCard;
-    public UnitData[]                   unitData;                                           // 유닛 데이터 배열
+    [SerializeField]
+    private List<UnitController>        unitRTSList = new List<UnitController>();           // RTS controller 이동, 선택에서 사용할 유닛 리스트
+    public static List<UnitController>  unitList = new List<UnitController>();              // 유닛의 생성, 제거를 관리할 유닛 리스트
+    [SerializeField]
+    private UnitData[]                  unitData;                                           // 유닛 데이터 배열
     private Vector2                     minSize = new Vector2(-6, -6);                      // 유닛 스폰 랜덤 위치 min
     private Vector2                     maxSize = new Vector2(6, 6);                        // 유닛 스폰 랜덤 위치 max
-    public MonsterManager               monsterManager;                                     // 현재 맵의 몬스터 정보를 얻기 위해
 
-    public int highCount;
-    public int oneCount;
-    public int twoCount;
-    public int threeCount;
-    public int fullCount;
-    public int straightCount;
-    public int fourCount;
-    public int plushCount;
-    public int straightPCount;
+    [SerializeField]
+    private int highCount;
+    [SerializeField]
+    private int oneCount;
+    [SerializeField]
+    private int twoCount;
+    [SerializeField]
+    private int threeCount;
+    [SerializeField]
+    private int fullCount;
+    [SerializeField]
+    private int straightCount;
+    [SerializeField]
+    private int fourCount;
+    [SerializeField]
+    private int plushCount;
+    [SerializeField]
+    private int straightPCount;
 
     private void Awake()
     {
         instance = this;
-        GetRankCount();
     }
 
 
     public void SpawnUnits()                                                        // 유닛을 생성하는 함수
     {   
         Vector3 spawnPos = new Vector3(Random.Range(minSize.x, maxSize.x), 4, Random.Range(minSize.y, maxSize.y)); 
+        ResetRankCount();
 
         if(dealCard.isHigh == true)
         {   
@@ -98,59 +110,100 @@ public class UnitManager : MonoBehaviour
         }        
 
         GetSpawnUnitsRTSList();
+        GetRankCount();
     }
 
-    public void GetRankCount()                                                          // 필드의 유닛 랭크갯수 저장용 함수
+    public void UnitCombine()
     {
-        for(int i=0; i<unitList.Count; i++)
+        Vector3 spawnPos = new Vector3(Random.Range(minSize.x, maxSize.x), 4, Random.Range(minSize.y, maxSize.y));
+
+
+        if(highCount <= 3)
         {
+            int removeCount = 0;
+            UnitController highQueen = Instantiate(unitData[9].prefab, spawnPos, Quaternion.identity);
+            unitList.Add(highQueen);
+            highQueen.GetComponent<UnitAttack>().SetUp(monsterManager);
+            highCount = 0;
+
+            for(int i=0; i<unitList.Count; i++)
+            {
+                UnitController target = GameObject.Find("High(Clone)").GetComponent<UnitController>();
+                unitList.Remove(target);
+                Destroy(target);
+                removeCount++;
+
+                if(removeCount == 3)
+                return;
+            }
+        }
+    }
+
+    public void GetRankCount()                                                          // 필드의 종류별 유닛의 수 저장용 함수
+    {   
+        for(int i=0; i<unitList.Count; i++)
+        {       
             if(unitList[i].name == "High(Clone)")
             {
-                highCount++;
+                GameManager.instance.GetComponent<UnitManager>().highCount++;
             }
 
             if(unitList[i].name == "One(Clone)")
             {
-                oneCount++;
+                GameManager.instance.GetComponent<UnitManager>().oneCount++;
             }
 
             if(unitList[i].name == "Two(Clone)")
             {
-                twoCount++;
+                GameManager.instance.GetComponent<UnitManager>().twoCount++;
             }
 
             if(unitList[i].name == "Three(Clone)")
             {
-                threeCount++;
+                GameManager.instance.GetComponent<UnitManager>().threeCount++;
             }
 
             if(unitList[i].name == "FullH(Clone)")
             {
-                fullCount++;
+                GameManager.instance.GetComponent<UnitManager>().fullCount++;
             }
 
             if(unitList[i].name == "Straight(Clone)")
             {
-                straightCount++;
+                GameManager.instance.GetComponent<UnitManager>().straightCount++;
             }
 
             if(unitList[i].name == "Four(Clone)")
             {
-                fourCount++;
+                GameManager.instance.GetComponent<UnitManager>().fourCount++;
             }
 
             if(unitList[i].name == "Plush(Clone)")
             {
-                plushCount++;
+                GameManager.instance.GetComponent<UnitManager>().plushCount++;
             }
 
             if(unitList[i].name == "StraightP(Clone)")
             {
-                straightPCount++;
+                GameManager.instance.GetComponent<UnitManager>().straightPCount++;
             }
         }
 
     }
+    
+    public void ResetRankCount()
+    {
+        highCount = 0;
+        oneCount = 0;
+        twoCount = 0;
+        threeCount  = 0;
+        fourCount = 0;
+        fullCount = 0;
+        straightCount = 0;
+        straightPCount = 0;
+        plushCount = 0;
+    }
+
     public List<UnitController> GetSpawnUnitsRTSList()
     {
         UnitController[] units = FindObjectsOfType<UnitController>();

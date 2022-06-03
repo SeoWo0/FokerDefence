@@ -24,6 +24,10 @@ public class UnitAttack : MonoBehaviour
     private MonsterManager  monsterManager;                             // 존재하는 몬스터 정보 획득용
     private Animator        animator;
 
+    public float AttDamage => attackDamage;
+    public float AttRange => attackRange;
+    public float AttSpeed => attackSpeed;
+
     private void Awake() {
         attackDamage = unitData.attDamage;
         attackSpeed = unitData.attSpeed;

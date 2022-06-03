@@ -85,10 +85,13 @@ public class MonsterManager : MonoBehaviour
     {
             cameraManager.ChangePokerCam();     // 카메라를 다시 포커쪽으로
             uIActiveManager.PokerUIOn();        // 포커 UI 켜주기
-            uIActiveManager.InfoUIOff();        // 게임쪽 UI 꺼주기
+            uIActiveManager.GameUIOff();        // 게임쪽 UI 꺼주기
+            uIActiveManager.UnitInfoOff();      // 켜져있던 유닛 정보창 꺼주기
+            // uIActiveManager.CombineUIOff();     // 켜져있던 유닛 조합창 꺼주기
             dealCard.ResetDeck();               // 덱을 다시 만들기 전 초기화
             dealCard.Deal();                    // 덱을 다시 만들고, 섞어주고, 플레이어 핸드 분배
             dealCard.ResetChangeButton();       // 패 교체를 위한 버튼 초기화
+
     }
 
 }
