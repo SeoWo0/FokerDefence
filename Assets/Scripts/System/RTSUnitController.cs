@@ -11,7 +11,6 @@ public class RTSUnitController : MonoBehaviour
         selectedUnitList = new List<UnitController>();
         unitList         = UnitManager.instance.GetSpawnUnitsRTSList();
     }
-
     public void ClickSelectUnit(UnitController unit)        // 마우스 클릭으로 유닛 선택
     {
         DeSelectAll();

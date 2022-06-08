@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class UnitManager : MonoBehaviour
     private UnitData[]                  unitData;                                           // 유닛 데이터 배열
     private Vector2                     minSize = new Vector2(-6, -6);                      // 유닛 스폰 랜덤 위치 min
     private Vector2                     maxSize = new Vector2(6, 6);                        // 유닛 스폰 랜덤 위치 max
+    [SerializeField]
+    private RTSUnitController           rTSUnitController;                                  // RTS 유닛 컴포넌트
 
     [SerializeField]
     private int highCount;
@@ -40,8 +43,11 @@ public class UnitManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update() {
+        CanCombine();
+    }
 
-    public void SpawnUnits()                                                        // 유닛을 생성하는 함수
+    public void SpawnUnits()        // 유닛 생성 함수
     {   
         Vector3 spawnPos = new Vector3(Random.Range(minSize.x, maxSize.x), 4, Random.Range(minSize.y, maxSize.y)); 
         ResetRankCount();
@@ -113,33 +119,74 @@ public class UnitManager : MonoBehaviour
         GetRankCount();
     }
 
-    public void UnitCombine()
+    public void UnitCombine()       // 유닛 조합 함수
     {
         Vector3 spawnPos = new Vector3(Random.Range(minSize.x, maxSize.x), 4, Random.Range(minSize.y, maxSize.y));
 
-
-        if(highCount <= 3)
-        {
+        if(highCount >= 2)          // HighQ 유닛 조합
+        {   
             int removeCount = 0;
             UnitController highQueen = Instantiate(unitData[9].prefab, spawnPos, Quaternion.identity);
             unitList.Add(highQueen);
             highQueen.GetComponent<UnitAttack>().SetUp(monsterManager);
-            highCount = 0;
 
-            for(int i=0; i<unitList.Count; i++)
+            int i = 0;
+            while(true)
             {
-                UnitController target = GameObject.Find("High(Clone)").GetComponent<UnitController>();
-                unitList.Remove(target);
-                Destroy(target);
-                removeCount++;
+                if(unitList[i].gameObject.name != "High(Clone)")
+                {
+                    i++;
+                    continue;
+                }
 
-                if(removeCount == 3)
-                return;
-            }
+                GameObject obj = unitList[i].gameObject;
+                UnitController target = unitList[i];
+
+                unitList.Remove(target);
+                Destroy(obj);
+
+                removeCount++;
+                GameManager.instance.GetComponent<UnitManager>().highCount--;
+                            
+
+                if(removeCount == 2)
+                {   
+                    rTSUnitController.unitList.Clear();
+
+                    for( int j =0; j<unitList.Count; j++)
+                    {
+                        rTSUnitController.unitList.Add(unitList[j]);
+                    }
+
+                    return;
+                }
+            }            
         }
     }
 
-    public void GetRankCount()                                                          // 필드의 종류별 유닛의 수 저장용 함수
+    public void CanCombine()        // 조합 버튼 활성화 함수
+    {
+        if(highCount >= 2 )
+        {
+            UIActiveManager.instance.highQButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            UIActiveManager.instance.highQButton.GetComponent<Button>().interactable = false;
+        }
+
+        if((oneCount >=1 && twoCount >=1) && (oneCount >=1 && threeCount >= 1))
+        {
+            UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = false;
+        }
+
+    } 
+    
+    public void GetRankCount()      // 필드의 종류별 유닛의 수 저장용 함수
     {   
         for(int i=0; i<unitList.Count; i++)
         {       
@@ -193,20 +240,22 @@ public class UnitManager : MonoBehaviour
     
     public void ResetRankCount()
     {
-        highCount = 0;
-        oneCount = 0;
-        twoCount = 0;
-        threeCount  = 0;
-        fourCount = 0;
-        fullCount = 0;
-        straightCount = 0;
-        straightPCount = 0;
-        plushCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().highCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().oneCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().twoCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().threeCount  = 0;
+        GameManager.instance.GetComponent<UnitManager>().fourCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().fullCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().straightCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().straightPCount = 0;
+        GameManager.instance.GetComponent<UnitManager>().plushCount = 0;
     }
 
     public List<UnitController> GetSpawnUnitsRTSList()
     {
         UnitController[] units = FindObjectsOfType<UnitController>();
+        unitRTSList.Clear();
+
         foreach (UnitController unit in units)
         {
             unitRTSList.Add(unit);

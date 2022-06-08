@@ -26,6 +26,9 @@ public class UnitController : MonoBehaviour
     public void MoveTo(Vector3 targetPos)
     {
         navMeshAgent.SetDestination(targetPos);
+
+        float distance = Vector3.Distance(gameObject.transform.position, targetPos);
+        float moveNeedTime = distance / navMeshAgent.velocity.magnitude;
     }
 
     

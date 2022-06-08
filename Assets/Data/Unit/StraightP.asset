@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upCost: 1
   sellCost: 1
-  damage: 1
-  range: 15
+  attDamage: 0
+  attRange: 15
   attSpeed: 1
-  prefab: {fileID: 6231724433999526140, guid: 1691df919b4f97d4fa67616dbc378daf, type: 3}
+  prefab: {fileID: 192925495380377809, guid: dd6be267b8a209a46a3943acbe775473, type: 3}

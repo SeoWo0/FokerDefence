@@ -2202,10 +2202,10 @@ GameObject:
   - component: {fileID: 4656427005168777708}
   - component: {fileID: 1620978537444090774}
   - component: {fileID: 1778148782123891689}
+  - component: {fileID: 8152734259347711834}
   - component: {fileID: 3115061278910807004}
   - component: {fileID: 142574360550842348}
   - component: {fileID: 4390841486077597182}
-  - component: {fileID: 8152734259347711834}
   m_Layer: 9
   m_Name: HighQ
   m_TagString: Untagged
@@ -2263,6 +2263,28 @@ CapsuleCollider:
   m_Height: 1.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.55, z: 0}
+--- !u!195 &8152734259347711834
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464312326707389270}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 35
+  m_Acceleration: 150
+  avoidancePriority: 50
+  m_AngularSpeed: 500
+  m_StoppingDistance: 0.5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &3115061278910807004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,7 +2311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 6142736147301433884, guid: 596061c42c1b6724597a6f41909838c8,
     type: 3}
-  unitData: {fileID: 0}
+  unitData: {fileID: 11400000, guid: c2545aee4c684364a836b89d485e044d, type: 2}
   attackPos: {fileID: 2631159491049272679}
   attackSpeed: 1
   attackRange: 50
@@ -2307,28 +2329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitMarker: {fileID: 2207022437843706559}
---- !u!195 &8152734259347711834
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5464312326707389270}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 35
-  m_Acceleration: 150
-  avoidancePriority: 50
-  m_AngularSpeed: 500
-  m_StoppingDistance: 0.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &5507365759825893627
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIActiveManager : MonoBehaviour
 {
     public static UIActiveManager   instance {get; private set;}
+
+    public Button[]                 pokerChangeButtons;
+    public Button                   highQButton;
+    public Button                   oneTwoThreeButton;
     [SerializeField]
     private GameObject              pokerUI;
     [SerializeField]
