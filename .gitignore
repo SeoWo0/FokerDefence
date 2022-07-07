@@ -60,32 +60,6 @@ crashlytics-build.properties
 
 # asset 파일들 이그노어
 
-Assets/Concrete textures pack/
-
-Assets/Real Stars Skybox/
-
-Assets/3d-character_animeGirlAkane/
-
-Assets/BodyGuards/
-
-Assets/_GhoulZombie/
+Assets/@Resources/
 
 Assets/GPM/
-
-Assets/2D Casual UI/
-
-Assets/Latifa V2 3D - Anime Style/
-
-Assets/AcquireChan/
-
-Assets/AnimeGirls/
-
-Assets/ArisaNew/
-
-Assets/Mryotaisu/
-
-Assets/Picola/
-
-Assets/Rin New 3d - Anime Style/
-
-Assets/Yong/

@@ -387,7 +387,6 @@ GameObject:
   m_Component:
   - component: {fileID: 87285198}
   - component: {fileID: 87285200}
-  - component: {fileID: 87285199}
   - component: {fileID: 87285201}
   m_Layer: 5
   m_Name: PanelInfoUI
@@ -423,35 +422,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 242.2}
   m_SizeDelta: {x: 300, y: -484.30652}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &87285199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87285197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &87285200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -544,13 +514,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: High + High + High
+  m_Text: High + High
 --- !u!222 &110464505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -785,6 +755,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1524662277}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1404969807}
+        m_MethodName: ClickOn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1224,7 +1205,6 @@ GameObject:
   - component: {fileID: 228317187}
   - component: {fileID: 228317186}
   - component: {fileID: 228317185}
-  - component: {fileID: 228317184}
   m_Layer: 5
   m_Name: ChangeButton
   m_TagString: Untagged
@@ -1251,19 +1231,6 @@ RectTransform:
   m_AnchoredPosition: {x: -580, y: -140.99997}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &228317184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228317182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f249effdf74d446ad2fe34e62bb15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dealCard: {fileID: 0}
 --- !u!114 &228317185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3778,6 +3745,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1404969807}
+        m_MethodName: ClickOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &853898939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5650,6 +5628,7 @@ GameObject:
   - component: {fileID: 1404969806}
   - component: {fileID: 1404969801}
   - component: {fileID: 1404969804}
+  - component: {fileID: 1404969807}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5887,6 +5866,18 @@ MonoBehaviour:
   fourCount: 0
   plushCount: 0
   straightPCount: 0
+--- !u!114 &1404969807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404969797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f4ce335ff16994389a637eeed6b451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430831801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,7 +6924,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1056116520}
   m_HandleRect: {fileID: 1056116519}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

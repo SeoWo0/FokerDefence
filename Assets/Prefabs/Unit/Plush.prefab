@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 2076121666071418014}
   m_Layer: 8
   m_Name: Plush
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -993,7 +993,7 @@ Animator:
   m_GameObject: {fileID: 5608792063103117653}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 50a0208afad970f42b91e82ff62fab00, type: 3}
-  m_Controller: {fileID: 9100000, guid: a7de61fc99a44214dbea03f106f01c8d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6c9fee94363925c4a9262a1f1e8a7371, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1030,7 +1030,7 @@ NavMeshAgent:
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 500
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1075,13 +1075,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784f1ee5856a0b546a6065142914e86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 8641817766986115892, guid: 2ab0c3cee463f6744bbaf591e5fd7728,
+  weaponPrefab: {fileID: 2502855046752069649, guid: f8d315bdcdae3ad4e977ae7bb69e00b8,
     type: 3}
   unitData: {fileID: 11400000, guid: 3597a67d08663d34fbab69702acf8bf7, type: 2}
   attackPos: {fileID: 8475138732319431305}
-  attackSpeed: 0
-  attackRange: 0
-  attackDamage: 0
 --- !u!1 &5608803823931946049
 GameObject:
   m_ObjectHideFlags: 0

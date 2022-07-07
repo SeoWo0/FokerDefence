@@ -33,7 +33,6 @@ public class MouseDrag : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             end = Input.mousePosition;
-
             // 마우스를 드래그 하는 동안 범위를 이미지로 표현
             DrawDragRectangle();
         }
@@ -54,7 +53,7 @@ public class MouseDrag : MonoBehaviour
     private void DrawDragRectangle()
     {
           // 드래그 범위를 나타내는 이미지 UI의 위치
-        dragRectangle.position = (start + end) * 0.5f;      
+        dragRectangle.position = (start + end) * 0.5f;     
 
           // 드래그 범위를 나타내는 이미지 UI의 크기
         dragRectangle.sizeDelta = new Vector2(Mathf.Abs(start.x - end.x), Mathf.Abs(start.y - end.y));

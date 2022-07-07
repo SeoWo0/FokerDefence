@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ public class ESCWindow : MonoBehaviour
 
     private void Update() {
         WindowOff();
-    }
+    }   
 
     public void WindowOff()
     {

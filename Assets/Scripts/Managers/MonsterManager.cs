@@ -9,16 +9,11 @@ public class MonsterManager : MonoBehaviour
     private List<Monster>           monsterList;            // 현재 맵에 존재하는 몬스터들의 정보
     private Wave                    currentWave;            // 현재 웨이브 정보
     private int                     currentMonsterCount;    // 현재 웨이브에 남아있는 몬스터의 숫자 
-    [SerializeField]
-    private PlayerHP                playerHP;               // 플레이어 체력 Component
-    [SerializeField]
-    private PlayerGold              playerGold;             // 플레이어 골드 Component  
-    [SerializeField]
-    private CameraManager           cameraManager;          // 카메라 매니저      
-    [SerializeField]
-    private DealCard                dealCard;               // 카드 관련 클래스  
-    [SerializeField]
-    private UIActiveManager         uIActiveManager;        // UI 매니저
+    [SerializeField] private PlayerHP   playerHP;           // 플레이어 체력 Component
+    [SerializeField] private PlayerGold playerGold;         // 플레이어 골드 Component  
+    [SerializeField] private CameraManager cameraManager;          // 카메라 매니저      
+    [SerializeField] private DealCard dealCard;               // 카드 관련 클래스  
+    [SerializeField] private UIActiveManager uIActiveManager;        // UI 매니저
 
 
 

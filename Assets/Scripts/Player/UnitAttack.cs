@@ -12,11 +12,8 @@ public class UnitAttack : MonoBehaviour
     private UnitData        unitData;                                   // 유닛 데이터
     [SerializeField]
     private Transform       attackPos;                                  // 무기 발사 위치
-    [SerializeField]
     private float           attackSpeed;                                // 공격 속도
-    [SerializeField]
     private float           attackRange;                                // 공격 범위  
-    [SerializeField]
     private float           attackDamage;                               // 공격력
 
     private WeaponState     weaponState = WeaponState.SearchTarget;     // 공격 무기의 상태
@@ -24,14 +21,15 @@ public class UnitAttack : MonoBehaviour
     private MonsterManager  monsterManager;                             // 존재하는 몬스터 정보 획득용
     private Animator        animator;
 
-    public float AttDamage => attackDamage;
+    public float AttDamage => attackDamage;                 
     public float AttRange => attackRange;
     public float AttSpeed => attackSpeed;
 
-    private void Awake() {
+    private void Awake() {                                              // UnitData의 데이터 값으로 설정
         attackDamage = unitData.attDamage;
         attackSpeed = unitData.attSpeed;
         attackRange = unitData.attRange;
+        animator = GetComponent<Animator>();
     }
 
     public void SetUp(MonsterManager monsterManager)
@@ -58,6 +56,7 @@ public class UnitAttack : MonoBehaviour
         {
             RotateToTarget();
         }
+
     }
 
     public void RotateToTarget()
@@ -73,6 +72,7 @@ public class UnitAttack : MonoBehaviour
     {
         while (true)
         {
+            animator.SetBool("isAttack", false);
             // 제일 가까이에 있는 적을 찾기 위해 최초 거리를 최대한 크게 설정
             float closeDistance = Mathf.Infinity;
             // MonsterManager의 monsterList 안에 있는 현재 맵의 존재하는 모든 몬스터 검사
@@ -115,7 +115,7 @@ public class UnitAttack : MonoBehaviour
                 ChangeState(WeaponState.SearchTarget);
                 break;
             }
-
+            
             yield return new WaitForSeconds(attackSpeed);
 
             WeaponAttack();
@@ -124,7 +124,12 @@ public class UnitAttack : MonoBehaviour
 
     private void WeaponAttack()
     {
+        if(animator.GetBool("isMove") == true)
+            return;
+            
+        animator.SetBool("isAttack", true);
         GameObject clone = Instantiate(weaponPrefab, attackPos.position, Quaternion.identity);
-        clone.GetComponent<MeleeAttack>().SetUp(attackTarget, attackDamage);
+    
+        clone.GetComponent<RangeAttack>().SetUp(attackTarget, attackDamage);       
     }
 }

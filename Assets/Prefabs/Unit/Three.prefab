@@ -3780,7 +3780,7 @@ GameObject:
   - component: {fileID: 1269471538225433405}
   m_Layer: 9
   m_Name: Three
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3812,7 +3812,7 @@ Animator:
   m_GameObject: {fileID: 8068146785210780842}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 895bba5160ea131489e4882eb6ded6ab, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4f8b36530750c1b41a67ad260de7f825, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6c9fee94363925c4a9262a1f1e8a7371, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3835,7 +3835,7 @@ NavMeshAgent:
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 500
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3894,13 +3894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784f1ee5856a0b546a6065142914e86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 8641817766986115892, guid: 2ab0c3cee463f6744bbaf591e5fd7728,
+  weaponPrefab: {fileID: 7922565735799238133, guid: ae5ccb9a9b4baaf46b485dd033cb4ece,
     type: 3}
   unitData: {fileID: 11400000, guid: 42b0eed089c42b1408a7e19e9edf4b14, type: 2}
   attackPos: {fileID: 8930789135624079781}
-  attackSpeed: 0
-  attackRange: 0
-  attackDamage: 0
 --- !u!1 &8068148827872540566
 GameObject:
   m_ObjectHideFlags: 0

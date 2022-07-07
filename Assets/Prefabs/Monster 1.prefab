@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae5527b61c050f4bb6c407961793c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 0.5
   gold: 1
 --- !u!114 &5323394217216316542
 MonoBehaviour:
@@ -371,4 +371,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6762789448531283210}
-  maxHP: 1
+  maxHP: 5

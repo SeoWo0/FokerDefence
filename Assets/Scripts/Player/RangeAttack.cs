@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour
+public class RangeAttack : MonoBehaviour
 {
-    private Transform   target;
-    private float       damage;
+    private Transform target;
+    private float damage;
 
-    [SerializeField]
-    private float       speed = 500f;
+    [SerializeField] private float speed = 100f;
 
     public void SetUp(Transform target, float damage)
     {
