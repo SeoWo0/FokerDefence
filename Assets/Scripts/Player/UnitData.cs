@@ -6,13 +6,12 @@ using UnityEngine;
 public class UnitData : ScriptableObject
 {
 [Header("Unit Cost")]
-public float upCost;
-public float sellCost;
+public int upCost;
 
 
 [Header("Unit Spec")]
 public float attDamage;
-public float attRange = 15;
+public float attRange;
 public float attSpeed;
 
 

@@ -8,8 +8,8 @@ public class UnitAttack : MonoBehaviour
 {
     [SerializeField]
     private GameObject      weaponPrefab;                               // 유닛 공격 무기 prefab
-    [SerializeField]
-    private UnitData        unitData;                                   // 유닛 데이터
+
+    public UnitData        unitData;                                   // 유닛 데이터
     [SerializeField]
     private Transform       attackPos;                                  // 무기 발사 위치
     private float           attackSpeed;                                // 공격 속도
@@ -21,7 +21,10 @@ public class UnitAttack : MonoBehaviour
     private MonsterManager  monsterManager;                             // 존재하는 몬스터 정보 획득용
     private Animator        animator;
 
-    public float AttDamage => attackDamage;                 
+    public float AttDamage {
+            get => attackDamage;
+            set => attackDamage = value;
+    }                
     public float AttRange => attackRange;
     public float AttSpeed => attackSpeed;
 
@@ -61,10 +64,9 @@ public class UnitAttack : MonoBehaviour
 
     public void RotateToTarget()
     {
-        if (attackTarget != null)
+        if (attackTarget != null && !animator.GetBool("isMove"))
         {
-            attackPos.LookAt(attackTarget.transform);
-            //transform.LookAt(attackTarget.transform);
+            gameObject.transform.LookAt(attackTarget.transform);
         }
     }
 
@@ -99,7 +101,7 @@ public class UnitAttack : MonoBehaviour
     private IEnumerator AttackToTarget()
     {
         while (true)
-        {
+        { 
             // 1. target이 있는지 검사 (다른 발사체에 의해 제거, Goal에 도착해 삭제 등)
             if (attackTarget == null)
             {
@@ -126,10 +128,10 @@ public class UnitAttack : MonoBehaviour
     {
         if(animator.GetBool("isMove") == true)
             return;
-            
+
         animator.SetBool("isAttack", true);
         GameObject clone = Instantiate(weaponPrefab, attackPos.position, Quaternion.identity);
-    
-        clone.GetComponent<RangeAttack>().SetUp(attackTarget, attackDamage);       
+        clone.transform.Rotate(Vector3.up);
+        clone.GetComponent<RangeAttack>().SetUp(attackTarget, attackDamage);      
     }
 }

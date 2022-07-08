@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bba7d50cfd5c74390bd77bd82e632e, type: 3}
   m_Name: FullH
   m_EditorClassIdentifier: 
-  upCost: 1
-  sellCost: 1
+  upCost: 15
   attDamage: 10
   attRange: 65
   attSpeed: 0.75

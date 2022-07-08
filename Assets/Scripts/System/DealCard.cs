@@ -457,6 +457,8 @@ public class DealCard : DeckCard
             return true;
         if(playerHand[0].myRank == playerHand[2].myRank && playerHand[0].myRank == playerHand[3].myRank)
             return true;
+        if(playerHand[0].myRank == playerHand[2].myRank && playerHand[0].myRank == playerHand[4].myRank)
+            return true;
         if(playerHand[0].myRank == playerHand[3].myRank && playerHand[0].myRank == playerHand[4].myRank)
             return true;
         if(playerHand[1].myRank == playerHand[2].myRank && playerHand[1].myRank == playerHand[3].myRank)
@@ -520,6 +522,9 @@ public class DealCard : DeckCard
     private bool FourOfKind()       // 포 카드인가?
     {
         if(playerHand[0].myRank == playerHand[1].myRank && playerHand[0].myRank == playerHand[2].myRank && playerHand[0].myRank == playerHand[3].myRank)
+            return true;
+
+        else if(playerHand[0].myRank == playerHand[1].myRank && playerHand[0].myRank == playerHand[2].myRank && playerHand[0].myRank == playerHand[4].myRank)
             return true;
 
         else if(playerHand[1].myRank == playerHand[2].myRank && playerHand[1].myRank == playerHand[3].myRank && playerHand[1].myRank == playerHand[4].myRank)

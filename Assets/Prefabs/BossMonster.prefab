@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 6730333668412706376}
   - component: {fileID: 5323394217216316542}
   m_Layer: 0
-  m_Name: Monster 5
+  m_Name: BossMonster
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 6935254253129040116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.174084, y: 2.5, z: -16.758179}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 6762789449283746379}
   m_Father: {fileID: 0}
@@ -310,7 +310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 40baace7df5ee8a45b66835b8fa9ffa6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,8 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae5527b61c050f4bb6c407961793c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
-  gold: 5
+  speed: 20
+  gold: 100
 --- !u!114 &5323394217216316542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,4 +371,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6762789448531283210}
-  maxHP: 10
+  maxHP: 500

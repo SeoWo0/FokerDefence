@@ -2456,6 +2456,8 @@ MonoBehaviour:
   textUnitAttDamage: {fileID: 1660610824}
   textUnitAttRange: {fileID: 1777323528}
   textUnitAttSpeed: {fileID: 1291892451}
+  m_playerGold: {fileID: 1586329675}
+  upgradeButton: {fileID: 1400605048}
 --- !u!1 &533583427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,22 +2889,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - spawnTime: 1
-    maxMonsterCount: 1
+  - spawnTime: 2
+    maxMonsterCount: 20
     monsterPrefabs:
     - {fileID: 6935254253129040116, guid: 54f73d91ca071344a93240f207d4e309, type: 3}
   - spawnTime: 2
-    maxMonsterCount: 1
+    maxMonsterCount: 25
     monsterPrefabs:
     - {fileID: 6935254253129040116, guid: 180b630f6809ebb448c438d3673c967a, type: 3}
   - spawnTime: 2
-    maxMonsterCount: 1
+    maxMonsterCount: 30
     monsterPrefabs:
-    - {fileID: 6935254253129040116, guid: 180b630f6809ebb448c438d3673c967a, type: 3}
+    - {fileID: 6935254253129040116, guid: 78b373c38af46e94dad9fa450bbf8433, type: 3}
   - spawnTime: 2
+    maxMonsterCount: 30
+    monsterPrefabs:
+    - {fileID: 6935254253129040116, guid: b236325d42b9dd549939efc997bdc326, type: 3}
+  - spawnTime: 1
     maxMonsterCount: 1
     monsterPrefabs:
-    - {fileID: 6935254253129040116, guid: 180b630f6809ebb448c438d3673c967a, type: 3}
+    - {fileID: 6935254253129040116, guid: a201edf3e28802a46994969e6b64d71c, type: 3}
   monsterManager: {fileID: 668575471}
 --- !u!1 &681580211
 GameObject:
@@ -5573,7 +5579,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400605049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 527510153}
+        m_MethodName: DamageUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1400605049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5779,8 +5796,7 @@ MonoBehaviour:
   layerGround:
     serializedVersion: 2
     m_Bits: 256
-  targetMarker: {fileID: 0}
-  unitDataViewer: {fileID: 527510153}
+  unitInfoUI: {fileID: 527510153}
 --- !u!114 &1404969803
 MonoBehaviour:
   m_ObjectHideFlags: 0

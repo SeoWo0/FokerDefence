@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bba7d50cfd5c74390bd77bd82e632e, type: 3}
   m_Name: ThreeOfK
   m_EditorClassIdentifier: 
-  upCost: 1
-  sellCost: 1
+  upCost: 10
   attDamage: 5
   attRange: 60
   attSpeed: 0.75
