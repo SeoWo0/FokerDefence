@@ -23,8 +23,8 @@ public class RangeAttack : MonoBehaviour
     {
         if(target != null)  // 타겟이 존재한다면
         {
-            Vector3 direction = (target.position - transform.position).normalized;
-            gameObject.transform.Translate(direction * speed * Time.deltaTime);
+            transform.LookAt(target);
+            gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         else

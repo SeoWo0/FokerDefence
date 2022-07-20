@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField]
-    private float   maxHP = 20;   // 플레이어 체력
+    private float maxHP = 20;   // 플레이어 체력
     private float   currentHP;    // 현재 체력
     [SerializeField]
     private Image   imageScreen;  // 화면 덮는 이미지 변수
+    [SerializeField] private GameObject gameOverWindow;
 
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
@@ -27,7 +28,9 @@ public class PlayerHP : MonoBehaviour
 
         if(currentHP <= 0 )
         {
-            Debug.Log("GameOver");
+            gameOverWindow.SetActive(true);
+            Time.timeScale = 0f;
+            UnitManager.unitList.Clear();
         }
     }
 

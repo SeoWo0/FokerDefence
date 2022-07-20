@@ -9,7 +9,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField]
     private MonsterManager  monsterManager;
     private int             currentWaveIndex = -1;  // 현재 웨이브 인덱스
-
+    [SerializeField] GameObject gameClearWindow;
+    public PlayerHP         playerHP;
+     
     public int              CurrentWave => currentWaveIndex + 1;    // 시작이 0이기 때문에 +1
     public int              MaxWave => waves.Length;
 
@@ -23,15 +25,23 @@ public class WaveManager : MonoBehaviour
             // MonsterManager의 StartWave() 함수 호출, 현재 웨이브 정보 제공
             monsterManager.StartWave(waves[currentWaveIndex]);
         }
-    }
 
+        else
+        {
+            if (playerHP.CurrentHP <= 0)
+                return;
+            Time.timeScale = 0f;
+            gameClearWindow.SetActive(true);
+            UnitManager.unitList.Clear();
+        }
+    }
 }
 
 [System.Serializable]
 public struct Wave
 {
     public float            spawnTime;          // 현재 웨이브 몬스터 생성 주기
-    public int              maxMonsterCount;  // 현재 웨이브 몬스터 생성 갯수
+    public int              maxMonsterCount;    // 현재 웨이브 몬스터 생성 갯수
     public GameObject[]     monsterPrefabs;     // 현재 웨이브 몬스터 prefab
 }
 

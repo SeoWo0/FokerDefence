@@ -51,6 +51,11 @@ public class MouseClick : MonoBehaviour
                 {
                     rTSUnitController.DeSelectAll();    // 전부 선택 해제
                 }
+
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerGround))
+                {
+                    unitInfoUI.OffPanel();
+                }
             }
         }
 

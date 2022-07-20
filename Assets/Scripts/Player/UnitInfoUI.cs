@@ -37,6 +37,11 @@ public class UnitInfoUI : MonoBehaviour
         UpdateUnitData();
     }
 
+    public void OffPanel()
+    {
+        gameObject.SetActive(false);
+    }
+    
     public void DamageUpgrade()
     {
             m_selectUnit.AttDamage++;

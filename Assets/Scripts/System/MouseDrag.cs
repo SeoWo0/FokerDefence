@@ -6,7 +6,6 @@ public class MouseDrag : MonoBehaviour
 {
     [SerializeField]
     private RectTransform       dragRectangle;          // 마우스로 드래그 한 범위 보여주는 이미지의 Transform
-
     private Rect                dragRect;               // 마우스 드래그 범위
     private Vector2             start = Vector2.zero;   // 드래그 시작 지점
     private Vector2             end = Vector2.zero;     // 드래그 종료 지점
@@ -48,7 +47,6 @@ public class MouseDrag : MonoBehaviour
             start = end = Vector2.zero;
             DrawDragRectangle();
         }
-
     }
     private void DrawDragRectangle()
     {
@@ -91,13 +89,6 @@ public class MouseDrag : MonoBehaviour
         // 모든 유닛을 검사하여
         foreach (UnitController unit in rTSUnitController.unitList)
         {
-            // if (dragRect.size.x * dragRect.size.y < 100)
-            // {
-            //     dragRect.size = new Vector2(100, 100);
-            // }
-            // Debug.Log("unit의 위치 : " + mainCamera.WorldToScreenPoint(unit.transform.position));
-            // Debug.Log("사각형의 크기 : " + dragRect);
-                //사각형이 너무 작을때
             // 유닛의 월드 좌표를 화면 좌표로 변환, 드래그 범위 내에 있는지 검사
             if (dragRect.Contains(mainCamera.WorldToScreenPoint(unit.transform.position)))
             {

@@ -18,6 +18,7 @@ public class UIActiveManager : MonoBehaviour
     private GameObject              unitInfoUI;       
     [SerializeField]
     private GameObject              combineUI;
+    [SerializeField] private GameObject dragUI;
 
     private void Awake() {
         instance = this;
@@ -36,11 +37,13 @@ public class UIActiveManager : MonoBehaviour
     public void GameUIOff()
     {
         gameUI.SetActive(false);
+        dragUI.SetActive(false);
     }
 
     public void GameUIOn()
     {
         gameUI.SetActive(true);
+        dragUI.SetActive(true);
     }
 
     public void UnitInfoOff()
@@ -48,10 +51,11 @@ public class UIActiveManager : MonoBehaviour
         unitInfoUI.SetActive(false);
     }
 
-    // public void CombineUIOff()
-    // {
-    //     combineUI.SetActive(false);
-    // }
+    public void CombineUIOff()
+    {
+        combineUI.SetActive(false);
+    }
+    
 
 }
 

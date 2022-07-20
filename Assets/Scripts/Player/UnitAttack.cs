@@ -59,7 +59,6 @@ public class UnitAttack : MonoBehaviour
         {
             RotateToTarget();
         }
-
     }
 
     public void RotateToTarget()
@@ -130,8 +129,8 @@ public class UnitAttack : MonoBehaviour
             return;
 
         animator.SetBool("isAttack", true);
+
         GameObject clone = Instantiate(weaponPrefab, attackPos.position, Quaternion.identity);
-        clone.transform.Rotate(Vector3.up);
         clone.GetComponent<RangeAttack>().SetUp(attackTarget, attackDamage);      
     }
 }

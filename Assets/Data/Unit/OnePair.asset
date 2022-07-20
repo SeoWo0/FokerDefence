@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bba7d50cfd5c74390bd77bd82e632e, type: 3}
   m_Name: OnePair
   m_EditorClassIdentifier: 
-  upCost: 7
+  upCost: 5
   attDamage: 2
   attRange: 50
   attSpeed: 1

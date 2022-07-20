@@ -48,7 +48,9 @@ public class UnitManager : MonoBehaviour
     }
 
     public void SpawnUnits()        // 유닛 생성 함수
-    {   
+    {
+        Time.timeScale = 1f;        // 게임 오버 후 재시작 했을 때 timeSclae 재조정 작업
+
         Vector3 spawnPos = new Vector3(Random.Range(minSize.x, maxSize.x), 4, Random.Range(minSize.y, maxSize.y)); 
         ResetRankCount();
 
@@ -162,6 +164,35 @@ public class UnitManager : MonoBehaviour
                 }
             }            
         }
+
+        //if (oneCount >= 1 && twoCount >= 1 && threeCount >= 1)
+        //{
+        //    int removeCount = 0;
+        //    UnitController oneTwoThree = Instantiate(unitData[10].prefab, spawnPos, Quaternion.identity);
+        //    unitList.Add(oneTwoThree);
+        //    oneTwoThree.GetComponent<UnitAttack>().SetUp(monsterManager);
+
+        //    int i = 0;
+        //    while (true)
+        //    {
+        //        if (unitList[i].gameObject.name != "One(Clone)")
+        //        {
+        //            i++;
+        //            continue;
+        //        }
+
+        //        GameObject obj = unitList[i].gameObject;
+        //        UnitController target = unitList[i];
+
+        //        unitList.Remove(target);
+        //        Destroy(obj);
+
+        //        removeCount++;
+        //        oneCount--;
+
+        //        if (unitList[i].gameObject.name != "Two(Clone)" && )
+        //    }
+        //}
     }
 
     public void CanCombine()        // 조합 버튼 활성화 함수
@@ -175,14 +206,14 @@ public class UnitManager : MonoBehaviour
             UIActiveManager.instance.highQButton.GetComponent<Button>().interactable = false;
         }
 
-        if((oneCount >=1 && twoCount >=1) && (oneCount >=1 && threeCount >= 1))
-        {
-            UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = true;
-        }
-        else
-        {
-            UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = false;
-        }
+        // if((oneCount >=1 && twoCount >=1) && (oneCount >=1 && threeCount >= 1))
+        // {
+        //     UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = true;
+        // }
+        // else
+        // {
+        //     UIActiveManager.instance.oneTwoThreeButton.GetComponent<Button>().interactable = false;
+        // }
 
     } 
     

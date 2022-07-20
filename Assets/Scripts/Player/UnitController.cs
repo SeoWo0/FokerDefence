@@ -53,6 +53,7 @@ public class UnitController : MonoBehaviour
             m_moveStartTime = 0;
         }
         navMeshAgent.SetDestination(targetPos);
+        
         m_isMoveStart = true;
         StartCoroutine("CheckMoveTime");
     }

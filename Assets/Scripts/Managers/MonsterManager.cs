@@ -11,7 +11,7 @@ public class MonsterManager : MonoBehaviour
     private int                     currentMonsterCount;    // 현재 웨이브에 남아있는 몬스터의 숫자 
     [SerializeField] private PlayerHP   playerHP;           // 플레이어 체력 Component
     [SerializeField] private PlayerGold playerGold;         // 플레이어 골드 Component  
-    [SerializeField] private CameraManager cameraManager;          // 카메라 매니저      
+    [SerializeField] private CameraManager cameraManager;   // 카메라 매니저      
     [SerializeField] private DealCard dealCard;               // 카드 관련 클래스  
     [SerializeField] private UIActiveManager uIActiveManager;        // UI 매니저
 
@@ -70,8 +70,10 @@ public class MonsterManager : MonoBehaviour
         monsterList.Remove(monster);
         Destroy(monster.gameObject);
 
-        if(monsterList.Count == 0)              // 몬스터가 어떤 경위로든 모두 파괴되었을때 다시 포커로 돌아가기위함
+        if(monsterList.Count == 0 && currentMonsterCount == 0) // 몬스터가 어떤 경위로든 모두 파괴되었을때 다시 포커로 돌아가기위함
         {
+            if (playerHP.CurrentHP <= 0)
+                return;
             ResetNext();
         }
     }
@@ -82,7 +84,7 @@ public class MonsterManager : MonoBehaviour
             uIActiveManager.PokerUIOn();        // 포커 UI 켜주기
             uIActiveManager.GameUIOff();        // 게임쪽 UI 꺼주기
             uIActiveManager.UnitInfoOff();      // 켜져있던 유닛 정보창 꺼주기
-            // uIActiveManager.CombineUIOff();     // 켜져있던 유닛 조합창 꺼주기
+            uIActiveManager.CombineUIOff();     // 켜져있던 유닛 조합창 꺼주기
             dealCard.ResetDeck();               // 덱을 다시 만들기 전 초기화
             dealCard.Deal();                    // 덱을 다시 만들고, 섞어주고, 플레이어 핸드 분배
             dealCard.ResetChangeButton();       // 패 교체를 위한 버튼 초기화
