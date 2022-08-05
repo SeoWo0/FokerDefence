@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class DeckCard : MonoBehaviour
 {
@@ -20,28 +18,24 @@ public class DeckCard : MonoBehaviour
             deck[i].mySuit = cardData[i].cardSuit;
             deck[i].myRank = cardData[i].cardRank;
         }
-        
-        ShuffleDeck();                                          // 덱 만들고 덱 한번 섞어주기
+
+        ShuffleDeck(deck);                                          // 덱 만들고 덱 한번 섞어주기
     }
 
-    public void ShuffleDeck()                                   // 덱 섞는 함수
+    public void ShuffleDeck<T>(List<T> list)                // 덱 섞는 함수
     {
-        System.Random rand = new System.Random();
-        Card cardData;
-
-        for (int ShuffleTime = 0; ShuffleTime < 10; ShuffleTime++)
+        System.Random _random = new System.Random();
+        int length = list.Count;
+        for(int shuffleTime = 0; shuffleTime<2; shuffleTime++)
         {
-            for (int i=0; i < deck.Count; i++)
-        {   
-            // cardData 섞기
-            int secondCardIndex = rand.Next(13);
-            cardData = deck[i];
-            deck[i] = deck[secondCardIndex];
-            deck[secondCardIndex] = cardData;
-
-        }
+            for (int i = 0; i < length; i++)
+            {
+                int r = i + (int)(_random.NextDouble() * (length - i));
+                T temp = list[r];
+                list[r] = list[i];
+                list[i] = temp;
+            }
         }
     }
-
 }
 

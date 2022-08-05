@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Akane_CameraScript" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgCAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\3d-character_animeGirlAkane\DemoScene\Scripts\Akane_CameraScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Akane_CharacterController" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAABAACAAAAEAAAAAAAAAAIAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Assets\@Resources\3d-character_animeGirlAkane\DemoScene\Scripts\Akane_CharacterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Emotions" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\3d-character_animeGirlAkane\DemoScene\Scripts\Emotions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyLightSc" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAgAQIAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\3d-character_animeGirlAkane\DemoScene\Scripts\MyLightSc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcquireChanController" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQIAAAAAAAAAAIMIQAAAAAAAAAAAAAKAAAACAEA=</HashCode>
+      <FileName>Assets\@Resources\AcquireChan\Scripts\AcquireChanController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MotionChanger" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAQAAACAAAQAAAAAAiAAAAAAAAAAAAACAAAQAQAA=</HashCode>
+      <FileName>Assets\@Resources\AcquireChan\Scripts\MotionChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleFollowCam" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\AcquireChan\Scripts\SimpleFollowCam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerBasicCode" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA5gCCAQAgIQAIAAUBAAKAiSAIBAMAOAQTJBCaggAkE=</HashCode>
+      <FileName>Assets\@Resources\ArisaNew\Script\PlayerBasicCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GenericBehaviour" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAAIAQAAABgAAIAAAAACAAAAAAgAAAAAEA=</HashCode>
+      <FileName>Assets\@Resources\ArisaNew\Script\PlayerBasicCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMoveCode" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQCAAQAMCQAIAAACIRAIABCAAAAGQAEAAAAAACQAAA=</HashCode>
+      <FileName>Assets\@Resources\ArisaNew\Script\PlayerMoveCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThirdPerson" Collapsed="true">
+    <Position X="13" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kBwABCADgAAADCCZgAAABAAAQAIIAABBAABAAABsA9A=</HashCode>
+      <FileName>Assets\@Resources\ArisaNew\Script\ThirdPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoShooting" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAACQAIAIAAgCAkADAAQAQAAAAQgCQAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Hovl Studio\AAA Projectiles Vol 2\Demo scene\DemoShooting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoDestroyPS" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Hovl Studio\AAA Projectiles Vol 2\Scripts\AutoDestroyPS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonOrbit" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAKAAAIIEBAEAAAgAAAARAAACECAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonOrbit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonLightFlicker" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAACAAAAAAAkAAACBACAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Scripts\PolygonLightFlicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="16.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIABAQACCgIAABIIAQAAAAgBAAAyAQAAAACEAAMAA=</HashCode>
+      <FileName>Assets\@Resources\Rin New 3d - Anime Style\Demo\Scripts\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraManager" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAAAIAAAAAACAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Managers\CameraManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAABAAAAAAAAgAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterManager" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQAAAAAIAAAAAAgAAKABEAEgAABAQABABEUA=</HashCode>
+      <FileName>Assets\Scripts\Managers\MonsterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIActiveManager" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACACAACAAgBEAABAAAABAAABAEAAIAAAAABgAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\UIActiveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitManager" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQYAAAQAgAIACAAAAgDEAAAGAABOACAIABQAAAEEEEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\UnitManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaveManager" Collapsed="true">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAACAAAAAAIAAAAAACAAAAAAAAABCABAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Managers\WaveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WayManager" Collapsed="true">
+    <Position X="16.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAASAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\WayManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monster" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAQQCAAAAAAiBAAAAAgAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Monster\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterHP" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAACAAAAAAAACAABAAAAAAAAAAgAIQAFA=</HashCode>
+      <FileName>Assets\Scripts\Monster\MonsterHP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerGold" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerGold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHP" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAEACAABAAAAAQAAAAwBAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerHP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RangeAttack" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAgAIAAAAAAAAIAAAQAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\RangeAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unit" Collapsed="true">
+    <Position X="18.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitAttack" Collapsed="true">
+    <Position X="6" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQCAmQAAAABFAgEBAAAEAAEABAAAAAAQAAgAAAAAEQ=</HashCode>
+      <FileName>Assets\Scripts\Player\UnitAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitController" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAABABAAAAAAEAAMIAAAIAACAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\UnitController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitData" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAQAAAAAAAAAAAAAAIAAABAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\UnitData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitInfoUI" Collapsed="true">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAAQAAAAEAIAAgAEgAAAAAACIAACAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Player\UnitInfoUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billboard" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\Billboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonClick" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\ButtonClick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAADAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardData" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\System\CardData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickToStart" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\ClickToStart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DealCard" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAQACAIAIiUgRAgCAAkEBAAIAghAICAAkkDoCAAMAAA=</HashCode>
+      <FileName>Assets\Scripts\System\DealCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeckCard" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAgABEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\DeckCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESCWindow" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\ESCWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseClick" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAABAAAAAAAAIAAAAAEAAAAAAAAAkAAEA=</HashCode>
+      <FileName>Assets\Scripts\System\MouseClick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseDrag" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAACIAAAAAAgAAAAAAAAAAIAEAAAQAAAAAEAAFA=</HashCode>
+      <FileName>Assets\Scripts\System\MouseDrag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RTSUnitController" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAACABCAgAAAAAEIgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\System\RTSUnitController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChange" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\SceneChange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextTMPViewer" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAAAAAAACIAAAAAIAAAAAEAAAAAAAEAAAQAQA=</HashCode>
+      <FileName>Assets\Scripts\System\TextTMPViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Muryotaisu.MuryotaisuController" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAgABCAAAQUAAiAEAACAAAAAAQAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Mryotaisu\Scripts\MuryotaisuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MuryotaisuDoor.MuryotaisuDoorOpen" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAACACAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Mryotaisu\Scripts\MuryotaisuDoorOpen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonBeamScript" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAdAAgAAAiAIAAAQAABAAAEAgAAAAAEAAAAAIwIAEQA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonButtonScript" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEQAAAAAACgAAAgAhAAMAAAAAAAEAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonButtonScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonEffectCycler" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASQAAAAACAACAAAAAAAAIAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonEffectCycler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonFireProjectile" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEACIAIgAAAAAAAAAAAAAgQQAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonFireProjectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonLoopScript" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAACAABAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonLoopScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonProjectileScript" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiEAAAAgAEAAAgAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonProjectileScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonSceneSelect" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RiygAAARkIABCwxApAACQQCCwQBAAASJGYACEgi0Ai4=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Demo\Scripts\PolygonSceneSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonBeamStatic" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AANAAgAEEiABAAAAAABAAAEAAAAAAAEISAAAAwAAGAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Scripts\PolygonBeamStatic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonLightFade" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAQACAgAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Scripts\PolygonLightFade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonRotation" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Scripts\PolygonRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolygonArsenal.PolygonSoundSpawn" Collapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\@Resources\Particles\Polygon Arsenal\Scripts\PolygonSoundSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Wave" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\WaveManager.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="EnumDestroyType" Collapsed="true">
+    <Position X="6" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Monster\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WeaponState" Collapsed="true">
+    <Position X="7.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Player\UnitAttack.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

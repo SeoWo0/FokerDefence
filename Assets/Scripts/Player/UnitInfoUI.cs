@@ -10,9 +10,9 @@ public class UnitInfoUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI     textUnitAttDamage;  // Unit 공격력
     [SerializeField] private TextMeshProUGUI     textUnitAttRange;   // Unit 공격거리
     [SerializeField] private TextMeshProUGUI     textUnitAttSpeed;   // Unit 공격속도
-    private UnitAttack          m_selectUnit;         // 선택한 유닛
     [SerializeField] private PlayerGold          m_playerGold;
-    [SerializeField] private Button upgradeButton;
+    [SerializeField] private Button              upgradeButton;
+    private UnitAttack                           m_selectUnit;       // 선택한 유닛
 
     private void Update() {
         if(m_playerGold.CurrentGold >= m_selectUnit.unitData.upCost)

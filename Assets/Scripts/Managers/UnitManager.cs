@@ -19,24 +19,8 @@ public class UnitManager : MonoBehaviour
     [SerializeField]
     private RTSUnitController           rTSUnitController;                                  // RTS 유닛 컴포넌트
 
-    [SerializeField]
-    private int highCount;
-    [SerializeField]
-    private int oneCount;
-    [SerializeField]
-    private int twoCount;
-    [SerializeField]
-    private int threeCount;
-    [SerializeField]
-    private int fullCount;
-    [SerializeField]
-    private int straightCount;
-    [SerializeField]
-    private int fourCount;
-    [SerializeField]
-    private int plushCount;
-    [SerializeField]
-    private int straightPCount;
+    [SerializeField] 
+    private int highCount, oneCount, twoCount, threeCount, fullCount, straightCount, fourCount, plushCount, straightPCount;
 
     private void Awake()
     {
@@ -89,7 +73,7 @@ public class UnitManager : MonoBehaviour
             fullH.GetComponent<UnitAttack>().SetUp(monsterManager);
         }
 
-        if(dealCard.isStaright == true)
+        if(dealCard.isStraight == true)
         {
             UnitController straight = Instantiate(unitData[5].prefab, spawnPos, Quaternion.identity);
             unitList.Add(straight);
@@ -110,7 +94,7 @@ public class UnitManager : MonoBehaviour
             plush.GetComponent<UnitAttack>().SetUp(monsterManager);
         }
 
-        if(dealCard.isStarightP == true)
+        if(dealCard.isStraightP == true)
         {
             UnitController straightP = Instantiate(unitData[8].prefab, spawnPos, Quaternion.identity); 
             unitList.Add(straightP);
